@@ -1,11 +1,10 @@
-// @TODO: YOUR CODE HERE!
 var svgWidth = 960;
 var svgHeight = 700;
 
 var margin = {
   top: 20,
   right: 40,
-  bottom: 60,
+  bottom: 80,
   left: 100
 };
 
@@ -78,20 +77,20 @@ d3.csv("data/data.csv").then(function (stateData) {
     chartGroup.append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", 0 - margin.left + 40)
-    .attr("x", 0 - (height / 2))
+    .attr("x", 0 - (height / 1.5))
     .attr("dy", "1em")
     .attr("class", "axisText")
     .style("fill", "black")
     .style("font", "20px sans-serif")
     .style("font-weight", "bold")
-    .text("People without Healthcare (%)");
+    .text("People Lacking Healthcare (%)");
 
   chartGroup.append("text")
     .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
     .attr("class", "axisText")
     .style("font", "20px sans-serif")
     .style("font-weight", "bold")
-    .text("Poverty (%)");
+    .text("Poverty Rates (%)");
 
   }).catch(function (error) {
   console.log(error);
